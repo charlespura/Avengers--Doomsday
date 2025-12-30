@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>S.H.I.E.L.D. DATABASE | DOOMSDAY</title>
+    <link rel="icon" type="image/png" href="logo.png">
     <script src="https://cdn.tailwindcss.com"></script>
     <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@500;700&display=swap" rel="stylesheet">
@@ -33,23 +34,30 @@
 </head>
 <body class="bg-slate-950">
 
-    <nav class="fixed top-0 w-full z-50 nav-glass">
-        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-            <div class="flex items-center gap-2">
-                <div class="w-8 h-8 border-2 border-cyan-500 rounded-full flex items-center justify-center animate-spin-slow">
-                    <div class="w-4 h-4 bg-cyan-500 rounded-full shadow-[0_0_10px_#06b6d4]"></div>
-                </div>
-                <span class="font-avengers font-bold tracking-tighter text-xl">S.H.I.E.L.D.</span>
+  <nav class="fixed top-0 w-full z-50 nav-glass">
+    <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+        
+        <div class="flex items-center gap-3">
+            <div class="relative group">
+                <div class="absolute -inset-1 bg-cyan-500 rounded-full blur opacity-25 group-hover:opacity-50 transition duration-500"></div>
+                
+                <img src="logo.png" alt="S.H.I.E.L.D. Logo" class="relative w-10 h-10 object-contain">
             </div>
             
-            <div class="hidden md:flex gap-8 text-xs font-bold tracking-[0.3em] uppercase">
-                <a href="#countdown" class="hover:text-cyan-400 transition">Countdown</a>
-                <a href="#trailers" class="hover:text-cyan-400 transition">Archives</a>
-                <a href="#social-uplink" class="hover:text-cyan-400 transition text-slate-500">Network Uplinks</a>
-                <a href="#" class="px-4 py-2 border border-cyan-500/50 hover:bg-cyan-500/10 transition">Access Database</a>
+            <div class="flex flex-col">
+                <span class="font-avengers font-bold tracking-tighter text-xl leading-none">S.H.I.E.L.D.</span>
+                <span class="text-[8px] tracking-[0.3em] text-cyan-500 font-bold uppercase">Database Admin</span>
             </div>
         </div>
-    </nav>
+        
+        <div class="hidden md:flex gap-8 text-xs font-bold tracking-[0.3em] uppercase">
+            <a href="#countdown" class="hover:text-cyan-400 transition">Countdown</a>
+            <a href="#trailers" class="hover:text-cyan-400 transition">Archives</a>
+            <a href="#social-uplink" class="hover:text-cyan-400 transition">Network</a>
+            <a href="#" class="px-4 py-2 border border-cyan-500/50 hover:bg-cyan-500/10 transition">Access Database</a>
+        </div>
+    </div>
+</nav>
 
     <section id="countdown" class="relative min-h-screen flex flex-col items-center justify-center pt-20 px-4 overflow-hidden">
         <div class="absolute inset-0 opacity-10 pointer-events-none">
@@ -253,6 +261,9 @@
          <div class="mt-4 text-[10px] text-slate-800 font-mono">
            @2025 Charles Pura. All Rights Reserved.
         </div>
+        <p class="text-[9px] text-slate-700 mt-8 max-w-2xl mx-auto leading-relaxed">
+    Disclaimer: This is a non-commercial fan-created project. "Avengers," "S.H.I.E.L.D.," and all related properties are trademarks of © Marvel Characters, Inc. and © Disney. No copyright infringement is intended.
+</p>
     </footer>
 
     <script>
