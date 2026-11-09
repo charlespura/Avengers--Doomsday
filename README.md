@@ -1,50 +1,40 @@
+# Avengers: Doomsday � The Doom Protocol
 
-📂 PROJECT: DOOMSDAY PROTOCOL
-🛡️ S.H.I.E.L.D. Internal Database | Countdown System
-This is a high-performance, single-page interface designed for the Avengers: Doomsday (2026) countdown. It utilizes a Stark Industries-inspired HUD (Heads-Up Display) aesthetic with real-time multiversal tracking.
+Unofficial fan experience built with React, Vite, TypeScript, Three.js and Lucide icons.
 
-🚀 Deployment Instructions
-Since this project uses Tailwind CSS via CDN and Alpine.js, there is no complex installation required.
+## Run locally
 
-File Setup: Save your code as index.html.
+Requires Node.js 22.12+ (or Node 24).
 
-Assets: Ensure you are connected to the internet (required to load the Marvel fonts and Tailwind utility engine).
+```sh
+npm ci
+npm run dev
+```
 
-Launch: Simply open index.html in any modern web browser (Chrome, Brave, or Edge recommended for best blur effects).
+```sh
+npm run build
+npm run preview
+```
 
-🛠️ Technical Specifications
-Framework: Tailwind CSS (Styling)
+On PowerShell with script execution disabled, use `npm.cmd` instead of `npm`.
 
-Logic Engine: Alpine.js (Reactive Countdown)
+## GitHub Pages
 
-Typography: Orbitron (Sci-Fi/Tech) & Rajdhani (Data/HUD)
+1. Push this project, including package-lock.json, to the main or master branch.
+2. In repository Settings > Pages > Build and deployment, choose GitHub Actions.
+3. The workflow at .github/workflows/deploy.yml builds and deploys dist automatically. It can also be started manually from Actions.
 
-Theme: Obsidian Black / Arc-Reactor Cyan / Danger Red
+Expected URL: https://charlespura.github.io/Avengers--Doomsday/
 
-⚙️ Configuration (How to edit)
-1. Changing the Target Date
-To update the countdown for a different release or event, locate the <script> tag at the bottom of the file and edit this line:
+Vite uses a relative base so assets work under the repository subdirectory. Navigation uses page anchors; no SPA rewrite is required. No credentials or API keys are needed.
 
-JavaScript
+## Content and customization
 
-targetDate: new Date('December 18, 2026 00:00:00'),
-2. Updating Social Uplinks
-The social media section on the left is currently linked to official Marvel accounts. To change these to your own community links, update the href attributes in the Social Uplink Section:
+Cast and release information are in src/main.tsx. Countdown targets December 18, 2026 at midnight US Eastern (05:00 UTC), a date reference rather than a confirmed screening time. Local theatrical dates may differ. Timer stops at zero after release.
 
-HTML
-<a href="YOUR_LINK_HERE" target="_blank"> ... </a>
+Film source: https://movies.disney.com/avengers-doomsday (checked November 9, 2026).
+Character source: https://www.marvel.com/characters/doctor-doom-victor-von-doom
 
-3. Adding More Trailers
-To add a third or fourth trailer, copy one of the group relative div blocks inside the grid and paste it below. The grid will automatically adjust the layout.
+The interactive procedural full-body model in src/Doom.tsx is a stylized fan interpretation with a green hood, faceted metal mask, mouth grille, cloak and clasp chain. It is not an official or screen-accurate movie asset. Animation respects reduced-motion preferences and can be paused. If WebGL is unavailable, a text fallback is shown. Cast grouping is editorial. Search, filters and countdown run entirely in the browser; content updates are manual.
 
-🧬 System Features
-Live Logic: Accurate Month/Day/Hour/Minute/Second calculation.
-
-Glassmorphism: HUD-style blurred navigation and panels.
-
-Responsive HUD: Custom clip-path polygons that maintain the "Stark Tech" look on mobile.
-
-Interactive Archives: Hover-glow effects on all decrypted video intel (Trailers).
-
-SECURITY NOTICE: This terminal is for authorized Avengers personnel only. Unauthorized access to the Doomsday Protocol will be met with immediate Stark Security intervention.<img width="1470" height="828" alt="Screenshot 2025-12-30 at 10 41 45 PM" src="https://github.com/user-attachments/assets/61096b6b-f3f8-491a-8e17-5a57cc95e5c4" />
-<img width="1470" height="828" alt="Screenshot 2025-12-30 at 10 41 57 PM" src="https://github.com/user-attachments/assets/e2b2ed37-5cfe-451e-922a-07dd39a89812" />
+Google Fonts are optional; local fallback fonts are configured. All characters and trademarks belong to Marvel and their respective owners. This project is not affiliated with Marvel or Disney.
