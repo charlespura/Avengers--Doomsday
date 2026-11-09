@@ -1,4 +1,4 @@
-# Avengers: Doomsday � The Doom Protocol
+# Avengers: Doomsday - The Doom Protocol
 
 Unofficial fan experience built with React, Vite, TypeScript, Three.js and Lucide icons.
 
